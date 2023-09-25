@@ -1,0 +1,29 @@
+Neos:
+  Neos:
+    userInterface:
+      translation:
+        autoInclude:
+          Shel.Neos.SubTrees:
+            - Main
+    Ui:
+      resources:
+        stylesheets:
+          'Shel.Neos.SubTrees:TabbedPageTree':
+            resource: resource://Shel.Neos.SubTrees/Public/JavaScript/Plugin.css
+        javascript:
+          'Shel.Neos.SubTrees:TabbedPageTree':
+            resource: resource://Shel.Neos.SubTrees/Public/JavaScript/Plugin.js
+
+      frontendConfiguration:
+        'Shel.Neos.SubTrees:TabbedPageTree':
+          presets:
+            default:
+              title: Default
+              tooltip: Default document tree
+              icon: home
+             # Example for a custom preset:
+#            blog:
+#              title: Blog
+#              tooltip: Blog & blog articles
+#              icon: list-alt
+#              rootNode: '/sites/mysite/blog'

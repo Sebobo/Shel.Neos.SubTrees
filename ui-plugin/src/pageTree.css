@@ -1,0 +1,13 @@
+.tabbedPageTree_pageTreeContainer {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.tabbedPageTree_pageTreeToolbar div {
+    border-top: 0;
+}
+
+.tabbedPageTree_pageTreeToolbar_loading {
+    text-align: center;
+}

@@ -1,0 +1,25 @@
+.tabbedPageTree_tabs__content {
+    height: auto;
+    flex: 1;
+}
+
+.tabbedPageTree_tabs__panel {
+    height: 100%;
+    display: flex;
+}
+
+.tabbedPageTree_tabs {
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.tabbedPageTree_tabs ul li button[role='tab'] {
+    padding-left:10px;
+    padding-right:10px;
+}
+
+.tabbedPageTree_panel {
+    height: 100%;
+    display: flex;
+}
