@@ -3,6 +3,8 @@
 This plugin adds tabs above the document tree in Neos CMS.
 Each tab can show a different subtree of the main page tree.
 
+⚠️ this plugin is currently only a preview for testing its viability and shouldn't be used in production yet.
+
 ## Installation
 
 ```console
