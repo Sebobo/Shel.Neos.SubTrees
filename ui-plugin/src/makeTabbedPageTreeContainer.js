@@ -143,7 +143,7 @@ const makeTabbedPageTreeContainer = (ToolBar, SearchBar, PageTree) => {
             this.props.focus(node.contextPath);
             this.props.setDocumentNode(node.contextPath);
             this.props.setActiveContentCanvasSrc(node.uri);
-            if (!this.props.getToggled.includes(node.contextPath)) {
+            if (this.props.getToggled.includes(node.contextPath)) {
                 this.props.toggle(node.contextPath);
             }
         };
