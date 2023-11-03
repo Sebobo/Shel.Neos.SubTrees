@@ -44,3 +44,11 @@ Run the following commands in the `ui-plugin` folder to build a new version of t
 yarn
 yarn build
 ```
+
+## Sponsors
+
+The public first release of this package was generously sponsored by [RTP GmbH](https://www.rtp.ch).
+
+## License
+
+See [License](LICENSE.txt)
