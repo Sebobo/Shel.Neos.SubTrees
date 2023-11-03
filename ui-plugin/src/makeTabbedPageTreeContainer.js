@@ -2,7 +2,7 @@ import React, { PureComponent } from "react";
 import { connect } from "react-redux";
 
 import { Tabs, Icon } from "@neos-project/react-ui-components";
-import { actions, selectors, isNodeCollapsed } from "@neos-project/neos-ui-redux-store";
+import { actions, selectors } from "@neos-project/neos-ui-redux-store";
 import { neos } from "@neos-project/neos-ui-decorators";
 import backend from "@neos-project/neos-ui-backend-connector";
 
@@ -10,7 +10,7 @@ import "./tabs.css";
 
 const SELECTED_TAB_STORAGE_KEY = "Shel.Neos.SubTrees:SelectedTab";
 
-const makeTabbedPageTreeContainer = (ToolBar, SearchBar, PageTree) => {
+const makeTabbedPageTreeContainer = (ToolBar, SearchBar, PageTree, loadingDepth) => {
     const ToolBarInstance = <ToolBar />;
     const SearchBarInstance = <SearchBar />;
 
@@ -145,7 +145,8 @@ const makeTabbedPageTreeContainer = (ToolBar, SearchBar, PageTree) => {
             this.props.focus(node.contextPath);
             this.props.setDocumentNode(node.contextPath);
             this.props.setActiveContentCanvasSrc(node.uri);
-            if (isNodeCollapsed(node)) {
+            if (!this.props.getToggled.includes(node.contextPath) && node.depth - 1 > loadingDepth) {
+                debugger;
                 this.props.toggle(node.contextPath);
             }
         };

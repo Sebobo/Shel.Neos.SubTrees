@@ -3,7 +3,7 @@ import makeTabbedPageTreeContainer from './makeTabbedPageTreeContainer';
 
 import './pageTree.css';
 
-manifest('Shel.Neos.SubTrees:TabbedPageTree', {}, (globalRegistry) => {
+manifest('Shel.Neos.SubTrees:TabbedPageTree', {}, (globalRegistry, { configuration }) => {
     const containerRegistry = globalRegistry.get('containers');
     const PageTreeToolbar = containerRegistry.get('LeftSideBar/Top/PageTreeToolbar');
     const PageTreeSearchbar = containerRegistry.get('LeftSideBar/Top/PageTreeSearchbar');
@@ -13,6 +13,6 @@ manifest('Shel.Neos.SubTrees:TabbedPageTree', {}, (globalRegistry) => {
     containerRegistry.set('LeftSideBar/Top/PageTreeSearchbar', () => null);
     containerRegistry.set(
         'LeftSideBar/Top/PageTree',
-        makeTabbedPageTreeContainer(PageTreeToolbar, PageTreeSearchbar, PageTree)
+        makeTabbedPageTreeContainer(PageTreeToolbar, PageTreeSearchbar, PageTree, configuration.nodeTree.loadingDepth)
     );
 });
