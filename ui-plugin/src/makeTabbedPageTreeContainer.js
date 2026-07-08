@@ -146,7 +146,6 @@ const makeTabbedPageTreeContainer = (ToolBar, SearchBar, PageTree, loadingDepth)
             this.props.setDocumentNode(node.contextPath);
             this.props.setActiveContentCanvasSrc(node.uri);
             if (!this.props.getToggled.includes(node.contextPath) && node.depth - 1 > loadingDepth) {
-                debugger;
                 this.props.toggle(node.contextPath);
             }
         };
